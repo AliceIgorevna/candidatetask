@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="One random tests execution" parallel="tests" thread-count="2">
+
+    <listeners>
+        <listener class-name="listeners.ExtentReportListener"/>
+        <listener class-name="listeners.LinkedInSignInFormListener"/>
+    </listeners>
+
+    <test name="Search 'Kreditech' in Google">
+        <classes>
+            <class name="KreditechTest">
+                <methods>
+                    <include name="searchKreditechInGoogle"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
